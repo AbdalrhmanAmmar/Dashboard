@@ -136,13 +136,13 @@ const Sidebar = ({ open, handleDrawerClose }) => {
           transition: "0.25s",
         }}
         alt="Remy Sharp"
-        src="https://media.allure.com/photos/5a26c1d8753d0c2eea9df033/3:4/w_1262,h_1683,c_limit/mostbeautiful.jpg"
+        src="img.jpg"
       />
       <Typography
         align="center"
-        sx={{ fontSize: open ? 17 : 0, transition: "0.25s" }}
+        sx={{ fontSize: open ? 17 : 0, transition: "0.4s" }}
       >
-        Layla Ali
+        Abdelrhman Ammar
       </Typography>
       <Typography
         align="center"
