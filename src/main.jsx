@@ -12,6 +12,8 @@ import App from "./App";
 import BarChart from "./pages/Barchart/Barchart";
 import LineChart from "./pages/LineChart/LineChart";
 import PieChart from "./pages/PieChart/PieChart";
+import NotFound from "./pages/Norfound/Notfound";
+import Geography from "./pages/Geography/Geography";
 // import Dashboard from "./page/dashboard/Dashboard";
 // import Team from "./page/team/Team";
 // import Contacts from "./page/contacts/Contacts";
@@ -38,9 +40,9 @@ const router = createBrowserRouter(
       <Route path="/bar" element={<BarChart />} />
       <Route path="/pie" element={<PieChart />} />
       <Route path="/line" element={<LineChart />} />
-      {/* <Route path="geography" element={<Geography />} />
+      <Route path="/geography" element={<Geography />} />
 
-      <Route path="*" element={<NotFound />} /> */}
+      <Route path="*" element={<NotFound />} />
     </Route>
   )
 );
