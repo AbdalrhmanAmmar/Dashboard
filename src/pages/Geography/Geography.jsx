@@ -1,6 +1,6 @@
 import { Box,  } from "@mui/material";
 
-import Geo from "./geo";
+import Geo from "./Geo";
 
 const Geography = () => {
   return (
