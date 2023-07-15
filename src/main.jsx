@@ -11,6 +11,7 @@ import {
 import App from "./App";
 import BarChart from "./pages/Barchart/Barchart";
 import LineChart from "./pages/LineChart/LineChart";
+import PieChart from "./pages/PieChart/PieChart";
 // import Dashboard from "./page/dashboard/Dashboard";
 // import Team from "./page/team/Team";
 // import Contacts from "./page/contacts/Contacts";
@@ -35,7 +36,7 @@ const router = createBrowserRouter(
       <Route path="calendar" element={<Calendar />} />
       <Route path="faq" element={<FAQ />} /> */}
       <Route path="/bar" element={<BarChart />} />
-      {/* <Route path="pie" element={<PieChart />} /> */}
+      <Route path="/pie" element={<PieChart />} />
       <Route path="/line" element={<LineChart />} />
       {/* <Route path="geography" element={<Geography />} />
 
