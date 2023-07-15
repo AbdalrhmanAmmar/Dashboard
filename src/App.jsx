@@ -1,15 +1,13 @@
 import * as React from "react";
-import {
-
-  styled,
-} from "@mui/material/styles";
+import { createTheme, styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import CssBaseline from "@mui/material/CssBaseline";
-
 
 import { Outlet } from "react-router-dom";
 import Navbar from "./Components/Navbar/Navbar";
 import Sidebar from "./Components/Sidebar/Sidebar";
+import { ThemeProvider } from "@emotion/react";
+import { getDesignTokens } from "./Theme";
 
 const DrawerHeader = styled("div")(({ theme }) => ({
   display: "flex",
@@ -31,21 +29,21 @@ export default function MiniDrawer() {
     setOpen(false);
   };
 
-  // const [mode, setMode] = React.useState(
-  //   Boolean(localStorage.getItem("currentMode"))
-  //     ? localStorage.getItem("currentMode")
-  //     : "light"
-  // );
-  // const theme = React.useMemo(() => createTheme(getDesignTokens(mode)), [mode]);
+  const [mode, setMode] = React.useState(
+    localStorage.getItem("currentMode")
+      ? localStorage.getItem("currentMode")
+      : "light"
+  );
+  const theme = React.useMemo(() => createTheme(getDesignTokens(mode)), [mode]);
 
   return (
-    // <ThemeProvider theme={theme}>
+    <ThemeProvider theme={theme}>
       <Box sx={{ display: "flex" }}>
         <CssBaseline />
         <Navbar
           open={open}
           handleDrawerOpen={handleDrawerOpen}
-          
+          setMode={setMode}
         />
 
         <Sidebar open={open} handleDrawerClose={handleDrawerClose} />
@@ -55,6 +53,6 @@ export default function MiniDrawer() {
           <Outlet />
         </Box>
       </Box>
-    // </ThemeProvider>
+    </ThemeProvider>
   );
 }
