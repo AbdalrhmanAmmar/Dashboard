@@ -16,6 +16,7 @@ import PieChart from "./pages/PieChart/PieChart";
 import Geography from "./pages/Geography/Geography";
 import NotFound from "./pages/Notfound/Notfound";
 import Team from "./pages/Team/Team";
+import Contacts from "./pages/Contacts/Contacts";
 // import Team from "./pages/Team/Team";
 // import Dashboard from "./page/dashboard/Dashboard";
 // import Team from "./page/team/Team";
@@ -35,8 +36,8 @@ const router = createBrowserRouter(
       {/* <Route index element={<Dashboard />} /> */}
       <Route path="/team" element={<Team />} />
 
-      {/* <Route path="contacts" element={<Contacts />} />
-      <Route path="invoices" element={<Invoices />} />
+      <Route path="contacts" element={<Contacts />} />
+      {/* <Route path="invoices" element={<Invoices />} />
       <Route path="form" element={<Form />} />
       <Route path="calendar" element={<Calendar />} />
       <Route path="faq" element={<FAQ />} /> */}
