@@ -9,7 +9,8 @@ const Contacts = () => {
      
 
       <Box sx={{ height: 650, width: "99%", mx: "auto" }}>
-        <DataGrid
+              <DataGrid
+                  
           slots={{
             toolbar: GridToolbar,
           }}
