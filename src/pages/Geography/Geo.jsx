@@ -123,35 +123,31 @@ const Geo = () => {
             tableCellValue: {},
           },
         }}
-        // legends={
-        //   isDashbord
-        //     ? []
-        //     : [
-        //         {
-        //           anchor: "bottom-left",
-        //           direction: "column",
-        //           justify: true,
-        //           translateX: 20,
-        //           translateY: -20,
-        //           itemsSpacing: 0,
-        //           itemWidth: 94,
-        //           itemHeight: 18,
-        //           itemDirection: "left-to-right",
-        //           itemTextColor: theme.palette.text.primary,
-        //           itemOpacity: 0.85,
-        //           symbolSize: 18,
-        //           effects: [
-        //             {
-        //               on: "hover",
-        //               style: {
-        //                 itemTextColor: "#000000",
-        //                 itemOpacity: 1,
-        //               },
-        //             },
-        //           ],
-        //         },
-        //       ]
-        // }
+        legends={[
+          {
+            anchor: "bottom-left",
+            direction: "column",
+            justify: true,
+            translateX: 20,
+            translateY: -20,
+            itemsSpacing: 0,
+            itemWidth: 94,
+            itemHeight: 18,
+            itemDirection: "left-to-right",
+            itemTextColor: theme.palette.text.primary,
+            itemOpacity: 0.85,
+            symbolSize: 18,
+            effects: [
+              {
+                on: "hover",
+                style: {
+                  itemTextColor: theme.palette.info.main,
+                  itemOpacity: 1,
+                },
+              },
+            ],
+          },
+        ]}
       />
     </Box>
   );

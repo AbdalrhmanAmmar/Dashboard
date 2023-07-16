@@ -12,8 +12,9 @@ import App from "./App";
 import BarChart from "./pages/Barchart/Barchart";
 import LineChart from "./pages/LineChart/LineChart";
 import PieChart from "./pages/PieChart/PieChart";
-import NotFound from "./pages/Norfound/Notfound";
+
 import Geography from "./pages/Geography/Geography";
+import NotFound from "./pages/Notfound/Notfound";
 // import Dashboard from "./page/dashboard/Dashboard";
 // import Team from "./page/team/Team";
 // import Contacts from "./page/contacts/Contacts";
