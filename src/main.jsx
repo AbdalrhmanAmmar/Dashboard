@@ -19,8 +19,8 @@ import Team from "./pages/Team/Team";
 import Contacts from "./pages/Contacts/Contacts";
 import Invoices from "./pages/Invoices/Invoices";
 import Form from "./pages/Form/Form";
-import { Calendar } from "@fullcalendar/core";
 import FAQ from "./pages/FAQ/FAQ";
+import  Dashboard  from "./pages/Dashboard/Dashboard";
 // import Team from "./pages/Team/Team";
 // import Dashboard from "./page/dashboard/Dashboard";
 // import Team from "./page/team/Team";
@@ -37,7 +37,7 @@ import FAQ from "./pages/FAQ/FAQ";
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
-      {/* <Route index element={<Dashboard />} /> */}
+      <Route index element={<Dashboard />} />
       <Route path="/team" element={<Team />} />
 
       <Route path="contacts" element={<Contacts />} />
