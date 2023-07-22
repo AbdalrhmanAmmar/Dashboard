@@ -6,7 +6,7 @@ import { DownloadOutlined } from "@mui/icons-material";
 
 function Dashboard() {
   return (
-    <div>
+    <>
       <Box sx={{ textAlign: "end" }}>
         <Button sx={{ padding: "6px 8px", textTransform:"capitalize"}} variant="contained" colot="primary">
           <DownloadOutlined />
@@ -16,7 +16,7 @@ function Dashboard() {
       <Row1 />
       <Row2 />
       <Row3 />
-    </div>
+    </>
   );
 }
 
