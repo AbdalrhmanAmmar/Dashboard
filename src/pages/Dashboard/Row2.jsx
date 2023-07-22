@@ -13,13 +13,14 @@ import { Transactions } from "./data";
 function Row2() {
   const theme = useTheme();
   return (
-    <Stack direction={"row"} flexWrap={"wrap"} gap={1} mt={3}>
+    <Stack direction={"row"} flexWrap={"wrap"} gap={1.5} mt={3}>
       <Paper sx={{ maxWidth: 700, flexGrow: 1 }}>
         <Stack
           direction={"row"}
           flexWrap={"wrap"}
           justifyContent={"space-between"}
           alignItems={"center"}
+          minWidth="400px"
         >
           <Box>
             <Typography
@@ -43,18 +44,26 @@ function Row2() {
         </Stack>
         <Line isDashboard={true} />
       </Paper>
-      <Box sx={{ height: 350, flexGrow: 1, overflow: "auto" }}>
+      <Box
+        sx={{
+          height: "380px",
+          flexGrow: 1,
+          overflow: "auto",
+          minWidth: "280px",
+        }}
+      >
         <Typography
           color={theme.palette.secondary.main}
           fontWeight={"bold"}
           p={1.2}
           variant="h6"
         >
-          React Transactions
+          Recent Transactions
         </Typography>
 
         {Transactions.map((item) => {
           return (
+            // eslint-disable-next-line react/jsx-key
             <Paper
               sx={{
                 mt: 0.4,
@@ -63,7 +72,7 @@ function Row2() {
                 alignItems: "center",
               }}
             >
-              <Box p={1.2} >
+              <Box p={1.2}>
                 <Typography variant="body1">{item.txId}</Typography>
                 <Typography variant="body2">{item.user} </Typography>
               </Box>
