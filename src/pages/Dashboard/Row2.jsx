@@ -7,14 +7,20 @@ import {
   useTheme,
 } from "@mui/material";
 import Line from "./../LineChart/Line";
-import { DownloadDoneOutlined, DownloadOutlined } from "@mui/icons-material";
+import { DownloadOutlined } from "@mui/icons-material";
+import { Transactions } from "./data";
 
 function Row2() {
   const theme = useTheme();
   return (
     <Stack direction={"row"} flexWrap={"wrap"} gap={1} mt={3}>
       <Paper sx={{ maxWidth: 700, flexGrow: 1 }}>
-        <Stack direction={"row"} flexWrap={"wrap"} justifyContent={'space-between'} alignItems={'center'}>
+        <Stack
+          direction={"row"}
+          flexWrap={"wrap"}
+          justifyContent={"space-between"}
+          alignItems={"center"}
+        >
           <Box>
             <Typography
               color={theme.palette.secondary.main}
@@ -37,7 +43,7 @@ function Row2() {
         </Stack>
         <Line isDashboard={true} />
       </Paper>
-      <Box sx={{ height: 350, flexGrow: 1 }}>
+      <Box sx={{ height: 350, flexGrow: 1, overflow: "auto" }}>
         <Typography
           color={theme.palette.secondary.main}
           fontWeight={"bold"}
@@ -46,6 +52,35 @@ function Row2() {
         >
           React Transactions
         </Typography>
+
+        {Transactions.map((item) => {
+          return (
+            <Paper
+              sx={{
+                mt: 0.4,
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+              }}
+            >
+              <Box p={1.2} >
+                <Typography variant="body1">{item.txId}</Typography>
+                <Typography variant="body2">{item.user} </Typography>
+              </Box>
+              <Typography variant="body1">{item.date} </Typography>
+
+              <Typography
+                borderRadius={1.4}
+                p={1}
+                bgcolor={theme.palette.error.main}
+                color={theme.palette.getContrastText(theme.palette.error.main)}
+                variant="body2"
+              >
+                ${item.cost}
+              </Typography>
+            </Paper>
+          );
+        })}
       </Box>
     </Stack>
   );
