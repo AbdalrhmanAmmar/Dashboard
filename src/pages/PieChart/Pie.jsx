@@ -35,10 +35,10 @@ const data = [
   },
 ];
 
-const Pie = () => {
+const Pie = ({ isDashboard = false }) => {
   const theme = useTheme();
   return (
-    <Box sx={{ height: "75vh" }}>
+    <Box sx={{ height: isDashboard ? "280px" : "75vh" }}>
       <ResponsivePie
         data={data}
         theme={{
@@ -155,8 +155,8 @@ const Pie = () => {
         arcLinkLabelsThickness={2}
         arcLinkLabelsColor={{ from: "color" }}
         arcLabelsSkipAngle={10}
-        enableArcLabels={ true}
-        enableArcLinkLabels={ true}
+        enableArcLabels={true}
+        enableArcLinkLabels={true}
         arcLabelsTextColor={{
           from: "color",
           modifiers: [["darker", 2]],

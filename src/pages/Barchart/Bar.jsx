@@ -38,10 +38,11 @@ const data = [
   },
 ];
 
-const Bar = () => {
+// eslint-disable-next-line react/prop-types
+const Bar = ({ isDashboard = false }) => {
   const theme = useTheme();
   return (
-    <Box sx={{ height: "75vh" }}>
+    <Box sx={{ height: isDashboard ? "280px" : "75vh" }}>
       <ResponsiveBar
         data={data}
         keys={["Spain", "France", "Germany"]}
