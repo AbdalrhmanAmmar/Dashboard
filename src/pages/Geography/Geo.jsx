@@ -3,14 +3,14 @@ import { Box, useTheme } from "@mui/material";
 import { geo } from "./World";
 import { data } from "./data";
 
-const Geo = ({isDashboard =false}) => {
+const Geo = ({ isDashboard = false }) => {
   const theme = useTheme();
   return (
     <Box
       sx={{
         borderRadius: "5px",
         border: `1px solid ${theme.palette.text.primary}`,
-        height: isDashboard ? '280px' : '75vh',
+        height: isDashboard ? "260px" : "75vh",
       }}
     >
       <ResponsiveChoropleth

@@ -42,7 +42,7 @@ const data = [
 const Bar = ({ isDashboard = false }) => {
   const theme = useTheme();
   return (
-    <Box sx={{ height: isDashboard ? "280px" : "75vh" }}>
+    <Box sx={{ height: isDashboard ? "260px" : "75vh" }}>
       <ResponsiveBar
         data={data}
         keys={["Spain", "France", "Germany"]}
@@ -222,6 +222,7 @@ const Bar = ({ isDashboard = false }) => {
             itemDirection: "left-to-right",
             itemOpacity: 0.85,
             symbolSize: 20,
+
             effects: [
               {
                 on: "hover",

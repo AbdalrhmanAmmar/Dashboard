@@ -41,7 +41,7 @@ const Row3 = () => {
       </Paper>
 
       <Paper sx={{ flexGrow: 1, minWidth: "400px", width: "33%" }}>
-        <Geo isDashbord={true} />
+      <Geo/>
       </Paper>
     </Stack>
   );
